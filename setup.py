@@ -72,7 +72,7 @@ setuptools.setup(
         "ezstructure": ["vars/*.pxd", "vars/*.h"]
     },
     install_requires=["numpy", "scipy"],
-    python_requires=">=3.5",
+    python_requires=">=3.6",
     entry_points={
         "console_scripts": [
             "ezstructure=ezstructure.structure:main",
