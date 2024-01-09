@@ -1,7 +1,7 @@
-
+# cython: language_level=3
 import numpy as np
 cimport numpy as np
-cimport admixprop as ap
+from . cimport admixprop as ap
 from cpython cimport bool
 from functools import reduce
 from scipy.special import digamma, gammaln, zeta

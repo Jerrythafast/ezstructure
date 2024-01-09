@@ -1,6 +1,7 @@
+# cython: language_level=3
 import numpy as np
 cimport numpy as np
-cimport allelefreq as af
+from . cimport allelefreq as af
 from scipy.special import digamma
 from cpython cimport bool
 from . import utils

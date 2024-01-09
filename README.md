@@ -145,3 +145,18 @@ packages. To use EasyStructure from within Python code, use the following exampl
 
     # Write output.
     write_output(Q, P, other, K, out_prefix, full=True)
+
+
+## Changelog
+
+### Version 1.0.0
+
+Initial repackaged version.
+
+### Version 1.0.1
+
+Corrected `python_requires` declaration to exclude Python 3.5.
+
+### Version 1.0.2
+
+Updated to support Cython3 and use `language_level=3`.

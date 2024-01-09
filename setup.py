@@ -48,25 +48,29 @@ setuptools.setup(
         Extension(
             "ezstructure.vars.utils",
             sources=["ezstructure/vars/utils.pyx"],
+            define_macros=[("NPY_NO_DEPRECATED_API", "NPY_1_7_API_VERSION")],
             include_dirs=[numpy_include]),
         Extension(
             "ezstructure.vars.admixprop",
             sources=["ezstructure/vars/admixprop.pyx", "ezstructure/vars/C_admixprop.c"],
+            define_macros=[("NPY_NO_DEPRECATED_API", "NPY_1_7_API_VERSION")],
             include_dirs=[numpy_include]),
         Extension(
             "ezstructure.vars.allelefreq",
             sources=["ezstructure/vars/allelefreq.pyx", "ezstructure/vars/C_allelefreq.c"],
-            #libraries=["gsl"],
+            define_macros=[("NPY_NO_DEPRECATED_API", "NPY_1_7_API_VERSION")],
             extra_compile_args=["-O3"],
             include_dirs=[numpy_include]),
         Extension(
             "ezstructure.vars.marglikehood",
             sources=["ezstructure/vars/marglikehood.pyx", "ezstructure/vars/C_marglikehood.c"],
+            define_macros=[("NPY_NO_DEPRECATED_API", "NPY_1_7_API_VERSION")],
             include_dirs=[numpy_include]),
         Extension(
             "ezstructure.fastStructure",
             sources=["ezstructure/fastStructure.pyx"],
-            include_dirs=[numpy_include, 'ezstructure/vars/'])],
+            define_macros=[("NPY_NO_DEPRECATED_API", "NPY_1_7_API_VERSION")],
+            include_dirs=[numpy_include, "ezstructure/vars/"])],
     cmdclass={"build_ext": Cython.Build.build_ext},
     package_data={
         "ezstructure": ["vars/*.pxd", "vars/*.h"]

@@ -1,7 +1,8 @@
+# cython: language_level=3
 import numpy as np
 cimport numpy as np
-cimport allelefreq as af
-cimport admixprop as ap
+from . cimport allelefreq as af
+from . cimport admixprop as ap
 from scipy.special import digamma, gammaln, polygamma
 from . import utils
 

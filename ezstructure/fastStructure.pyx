@@ -1,3 +1,4 @@
+# cython: language_level=3
 import numpy as np
 cimport numpy as np
 from cpython cimport bool
@@ -302,7 +303,7 @@ cdef np.ndarray CV(np.ndarray[np.uint8_t, ndim=2] Gtrue, ap.AdmixProp psi, af.Al
 
         if not len(newmasks)>=cv:
             wellmasked = False
-            print "Failed"
+            print("Failed")
 
     masks = newmasks[:cv]
     meandeviance = np.zeros((cv,), dtype=float)
