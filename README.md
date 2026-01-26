@@ -164,3 +164,7 @@ Updated to support Cython3 and use `language_level=3`.
 ### Version 1.0.3
 
 Final version to use `numpy<2`. Provided for compatibility purposes.
+
+### Version 1.0.4
+
+First version to use `numpy>=2`. Requires Python 3.9 or newer.
