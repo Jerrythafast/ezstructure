@@ -160,3 +160,7 @@ Corrected `python_requires` declaration to exclude Python 3.5.
 ### Version 1.0.2
 
 Updated to support Cython3 and use `language_level=3`.
+
+### Version 1.0.3
+
+Final version to use `numpy<2`. Provided for compatibility purposes.
